@@ -1,30 +1,30 @@
+## GUI for Basic Bio-computing Algorithms Using Python
 This is a bio-computing project Using python
 for both the GUI and the algorithms in the back-end
 the GUI Using tkinter built in library and custom tkinter framework
 and the algorithms in the back-end using only plain python 
 
-Project Description:
+## Project Description:
 This is a GUI(graphical user interface) for a different algorithms 
 That is used in bio-computing field to deal with DNA sequences 
 Each algorithm do a specific task 
 
+---
 
-
-
-
-How to run the project:
-1-fork the repo to your account
-2-clone the repo using https or ssh
-3-open the project on your local machine in your favorite code editor
+## How to run the project:
+1. fork the repo to your account
+2. clone the repo using https or ssh
+3. open the project on your local machine in your favorite code editor
 (I prefer vscode but you can use any other code editor)
-4-run the command : 
-    python main.py 
+4. run the command : 
+    `python main.py` 
 in vscode terminal
 or in any other terminal the project is opened in.
-5-You should now see the GUI for the app and now you can start using it
+5. You should now see the GUI for the app and now you can start using it
 
+---
 
-Errors That I Faced and solutions:
+## Errors That I Faced and solutions:
 
 https://www.youtube.com/watch?v=20sWJ2sImVo
 
@@ -32,6 +32,7 @@ https://stackoverflow.com/questions/37403816/python-import-modules-once-then-sha
 
 https://stackoverflow.com/questions/36810113/importing-an-own-python-file-class-not-defined
 
+<<<<<<< HEAD
 https://python-forum.io/thread-29269.html
 
 https://www.appsloveworld.com/coding/python3x/75/how-to-handle-invalid-command-name-error-while-executing-after-script-in-tki
@@ -39,6 +40,11 @@ https://www.appsloveworld.com/coding/python3x/75/how-to-handle-invalid-command-n
 https://stackoverflow.com/questions/26168967/invalid-command-name-while-executing-after-script
 
 Tutorials and Repos I Used:
+=======
+---
+
+## Tutorials and Repos I Used:
+>>>>>>> da156fdc20ffad3b3030883ee55375b1f5cf84fa
 https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/grid-config.html
 
 https://www.youtube.com/watch?v=ibf5cx221hk
