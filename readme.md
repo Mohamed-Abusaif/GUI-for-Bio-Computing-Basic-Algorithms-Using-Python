@@ -30,15 +30,18 @@ https://www.youtube.com/watch?v=20sWJ2sImVo
 
 https://stackoverflow.com/questions/37403816/python-import-modules-once-then-share-with-several-files
 
-
+https://stackoverflow.com/questions/36810113/importing-an-own-python-file-class-not-defined
 
 Tutorials and Repos I Used:
+https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/grid-config.html
 
 https://www.youtube.com/watch?v=ibf5cx221hk
 
 https://www.youtube.com/watch?v=iM3kjbbKHQU
 
 https://www.youtube.com/watch?v=95tJO7XJlko
+
+https://www.w3schools.com/python/python_classes.asp
 
 https://github.com/TomSchimansky/CustomTkinter
 
