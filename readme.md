@@ -13,7 +13,7 @@ Each algorithm do a specific task
 
 
 How to run the project:
-1-fork the repo to your account
+1.fork the repo to your account
 2-clone the repo using https or ssh
 3-open the project on your local machine in your favorite code editor
 (I prefer vscode but you can use any other code editor)
