@@ -1,14 +1,17 @@
+## GUI for Basic Bio-computing Algorithms Using Python
 This is a bio-computing project Using python
 for both the GUI and the algorithms in the back-end
 the GUI Using tkinter built in library and custom tkinter framework
 and the algorithms in the back-end using only plain python 
 
-Project Description:
+## Project Description:
 This is a GUI(graphical user interface) for a different algorithms 
 That is used in bio-computing field to deal with DNA sequences 
 Each algorithm do a specific task 
+
 ---
-How to run the project:
+
+## How to run the project:
 1. fork the repo to your account
 2. clone the repo using https or ssh
 3. open the project on your local machine in your favorite code editor
@@ -17,17 +20,21 @@ How to run the project:
     `python main.py` 
 in vscode terminal
 or in any other terminal the project is opened in.
-5-You should now see the GUI for the app and now you can start using it
+5. You should now see the GUI for the app and now you can start using it
+
 ---
-Errors That I Faced and solutions:
+
+## Errors That I Faced and solutions:
 
 https://www.youtube.com/watch?v=20sWJ2sImVo
 
 https://stackoverflow.com/questions/37403816/python-import-modules-once-then-share-with-several-files
 
 https://stackoverflow.com/questions/36810113/importing-an-own-python-file-class-not-defined
+
 ---
-Tutorials and Repos I Used:
+
+## Tutorials and Repos I Used:
 https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/grid-config.html
 
 https://www.youtube.com/watch?v=ibf5cx221hk
