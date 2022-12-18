@@ -32,6 +32,12 @@ https://stackoverflow.com/questions/37403816/python-import-modules-once-then-sha
 
 https://stackoverflow.com/questions/36810113/importing-an-own-python-file-class-not-defined
 
+https://python-forum.io/thread-29269.html
+
+https://www.appsloveworld.com/coding/python3x/75/how-to-handle-invalid-command-name-error-while-executing-after-script-in-tki
+
+https://stackoverflow.com/questions/26168967/invalid-command-name-while-executing-after-script
+
 Tutorials and Repos I Used:
 https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/grid-config.html
 
