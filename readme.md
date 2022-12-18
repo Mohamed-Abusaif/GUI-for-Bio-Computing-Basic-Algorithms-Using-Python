@@ -38,8 +38,6 @@ https://www.appsloveworld.com/coding/python3x/75/how-to-handle-invalid-command-n
 
 https://stackoverflow.com/questions/26168967/invalid-command-name-while-executing-after-script
 
-Tutorials and Repos I Used:
-
 ---
 
 ## Tutorials and Repos I Used:
