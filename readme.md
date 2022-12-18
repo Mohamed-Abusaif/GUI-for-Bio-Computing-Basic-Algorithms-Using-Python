@@ -12,8 +12,23 @@ Each algorithm do a specific task
 
 
 
+How to run the project:
+1-fork the repo to your account
+2-clone the repo using https or ssh
+3-open the project on your local machine in your favorite code editor
+(I prefer vscode but you can use any other code editor)
+4-run the command : 
+    python main.py 
+in vscode terminal
+or in any other terminal the project is opened in.
+5-You should now see the GUI for the app and now you can start using it
 
 
+Errors That I Faced and solutions:
+
+https://www.youtube.com/watch?v=20sWJ2sImVo
+
+https://stackoverflow.com/questions/37403816/python-import-modules-once-then-share-with-several-files
 
 
 
@@ -23,5 +38,8 @@ https://www.youtube.com/watch?v=ibf5cx221hk
 
 https://www.youtube.com/watch?v=iM3kjbbKHQU
 
+https://www.youtube.com/watch?v=95tJO7XJlko
+
 https://github.com/TomSchimansky/CustomTkinter
+
 
