@@ -1,3 +1,4 @@
+import main
 import tkinter
 import tkinter.messagebox
 import customtkinter
@@ -7,12 +8,11 @@ customtkinter.set_appearance_mode("Dark")
 # Themes: "blue" (standard), "green", "dark-blue"
 customtkinter.set_default_color_theme("blue")
 
-import main
 
 class section2GUI(customtkinter.CTk):
     def __init__(self):
         super().__init__()
-        
+
         def back_to_home():
             print("hello")
             self.destroy()
@@ -26,17 +26,18 @@ class section2GUI(customtkinter.CTk):
         # configure grid layout (4x4)
         self.grid_columnconfigure(0, weight=1)
         # self.grid_columnconfigure((2, 3), weight=0)
-        self.grid_rowconfigure((0, 1, 2 , 3,4), weight=1)
+        self.grid_rowconfigure((0, 1, 2, 3, 4), weight=1)
         frame = customtkinter.CTkFrame(master=self)
         frame.pack(pady=20, padx=60, fill="both", expand=True)
-        label = customtkinter.CTkLabel(master=frame, text="Section 2:", font=("Roboto", 24))
+        label = customtkinter.CTkLabel(
+            master=frame, text="Section 2:", font=("Roboto", 24))
         label.pack(pady=12, padx=10)
+        
+        self.entry = customtkinter.CTkEntry(master=frame, placeholder_text="CTkEntry")
+        # self.entry.grid(row=3, column=1, padx=(
+        #     20, 0), pady=(20, 20))
 
-
-
-
-
-        back_btn = customtkinter.CTkButton(master=frame, text="Back to Home!", font=("Roboto" , 20),command=back_to_home)
+        back_btn = customtkinter.CTkButton(
+            master=frame, text="Back to Home!", font=("Roboto", 20), command=back_to_home)
         back_btn.pack(pady=12, padx=10)
         # back_btn.grid(row=3 , column =0 , pady=12, padx=10)
-

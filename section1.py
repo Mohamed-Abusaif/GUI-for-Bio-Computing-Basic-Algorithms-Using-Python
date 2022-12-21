@@ -4,12 +4,21 @@ import tkinter.messagebox
 import customtkinter
 from tkinter import filedialog
 
+import os 
+import sys 
+# sys.path.append('D:\OnGoing Projects\bio computing project\Project\SectionsAlgorithms')
+
+from SectionsAlgorithms.AlgoSec1 import section1func
+
+
+
+
+
+
 # Modes: "System" (standard), "Dark", "Light"
 customtkinter.set_appearance_mode("Dark")
 # Themes: "blue" (standard), "green", "dark-blue"
 customtkinter.set_default_color_theme("blue")
-
-
 
 class section1GUI(customtkinter.CTk):
     def __init__(self):
@@ -24,6 +33,7 @@ class section1GUI(customtkinter.CTk):
                                                              ("all files",
                                                               "*.*")))
             fileLabel = customtkinter.CTkLabel(frame, text="File Name: "+filename).pack()
+            section1func(filename)
 
         def back_to_home():
             print("hello")
@@ -38,7 +48,7 @@ class section1GUI(customtkinter.CTk):
         # configure grid layout (4x4)
         self.grid_columnconfigure(0, weight=1)
         # self.grid_columnconfigure((2, 3), weight=0)
-        self.grid_rowconfigure((0, 1, 2, 3, 4), weight=1)
+        self.grid_rowconfigure( 0 , weight=1)
         frame = customtkinter.CTkFrame(master=self)
         frame.pack(pady=20, padx=60, fill="both", expand=True)
         label = customtkinter.CTkLabel(

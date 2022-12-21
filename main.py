@@ -132,7 +132,7 @@ class App(customtkinter.CTk):
             app.mainloop()
         except:
             print("Scene Changed to Section 1!")
-            print("fuck you bitch")
+         
 
     def section2_scene_event(self):
         try:
