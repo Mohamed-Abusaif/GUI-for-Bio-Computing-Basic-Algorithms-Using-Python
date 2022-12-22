@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import tkinter
+import os
 def section1func1(dataset):
     print("hello from section 1 algorithm")
     print("hello form:" + dataset)
@@ -23,9 +24,11 @@ def section1func1(dataset):
     df = pd.read_csv('./HAPPENN.csv', index_col=0)
     df
     print("new file happen.csv created!")
+    os.system("start "+"./HAPPENN.csv")
+    print("file is opened in new window now!")
     return df
 
-    
+
 # def section1func2(file):
 #     infile = open('seq.fasta')
 #     tb=[]

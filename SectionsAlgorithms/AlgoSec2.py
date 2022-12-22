@@ -1,52 +1,65 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Oct 11 19:37:21 2022
+from tkinter import *
+import customtkinter
 
-@author: Mohamed Elhakim
-"""
 
-def GC_Content(seq):
-    l=len(seq)
-    num_G=seq.count("G")
-    num_C=seq.count("C")
-    total=num_C+num_G
+def GC_Content(seq, resultLabel):
+    seq = (seq.get())
+    l = float(len(seq))
+    num_G = seq.count("G")
+    num_C = seq.count("C")
+    total = float((num_C)+num_G)/l
+    resultLabel.configure(text="Result is: " + str(total))
     return total/l
-def Complement(seq):
+
+
+def Complement(seq, resultLabel=None):
+    dic = {"G": "C", "C": "G", "A": "T", "T": "A"}
+    newseq= seq.get()
+    s = list(newseq)
+    for i in range(len(newseq)):
+        s[i] = str(dic[newseq[i]])
+    s = "".join(s)
+    if resultLabel is None:
+        return s
+    else:
+        resultLabel.configure(text="Result is: " + s)
+        return s
+
+def Reverse(seq, resultLabel=None):
+        newseq = seq.get()
+        s = list(newseq)
+        s = reversed(s)
+        s = "".join(s)
+      
+        if resultLabel is None:
+            return s
+        else:
+            resultLabel.configure(text="Result is: " +s )
+            return s
+
+
+
+def RComplement(seq):
     dic={"G":"C","C":"G","A":"T","T":"A"}
     s=list(seq)
     for i in range(len(seq)):
-        s[i]=str(dic[s[i]])
+        s[i]=str(dic[seq[i]])
     s="".join(s)
-    return s
-def Reverse(seq):
+    return s    
+def RReverse(seq):
     s=list(seq)
     s=reversed(s)
     s="".join(s)
     return s
-def Reverse_Complement(seq):
-    seq=Reverse(seq)
-    seq=Complement(seq)
+
+def Reverse_Complement( seq, resultLabel):
+    seq = (seq.get())
+    L=resultLabel
+    seq=RReverse(seq)
+    seq=RComplement(seq)
+
+    resultLabel.configure(text="Result is: " + seq )
     return seq 
-
-
-file=open("dna1.fasta")
-l=[i for i in file]
-seq=l[1][0:-1]
-l=len(seq)
-count=0
-for i in range(len(seq)):
-    if seq[i]=="G" or seq[i]=="C":
-        count+=1
-print(count/l)
-s=""
-for i in range(len(seq)):
-    s=seq[i]+s
-print(s)
-#print("GC Content",GC_Content(s))
-# print("Reverse",Reverse(s))
-
-# print("Reverse Complement",Reverse_Complement(s))
-
 
 
 
