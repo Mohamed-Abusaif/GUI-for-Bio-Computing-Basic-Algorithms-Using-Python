@@ -8,7 +8,7 @@ import os
 import sys 
 # sys.path.append('D:\OnGoing Projects\bio computing project\Project\SectionsAlgorithms')
 
-from SectionsAlgorithms.AlgoSec1 import section1func
+from SectionsAlgorithms.AlgoSec1 import section1func1
 
 
 
@@ -33,7 +33,8 @@ class section1GUI(customtkinter.CTk):
                                                              ("all files",
                                                               "*.*")))
             fileLabel = customtkinter.CTkLabel(frame, text="File Name: "+filename).pack()
-            section1func(filename)
+            section1func1(filename)
+            
 
         def back_to_home():
             print("hello")

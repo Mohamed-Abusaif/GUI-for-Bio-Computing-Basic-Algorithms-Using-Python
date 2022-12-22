@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
-
-def section1func(dataset):
+import tkinter
+def section1func1(dataset):
     print("hello from section 1 algorithm")
     print("hello form:" + dataset)
     infile = open(dataset)
@@ -19,26 +19,27 @@ def section1func(dataset):
     head=['Sequence','y']
     df=pd.DataFrame(tb,columns=head)
     df.to_csv("HAPPENN.csv")
-
     print(df)
-
     df = pd.read_csv('./HAPPENN.csv', index_col=0)
-
     df
+    print("new file happen.csv created!")
+    return df
 
-    infile = open('seq.fasta')
-    tb=[]
-    l=[]
-    for line in infile:
-        if line[0]==">":
-            l.append(line[1:-1])
-        else:
-            seq=line[:-1]
-            tb.append(seq)
+    
+# def section1func2(file):
+#     infile = open('seq.fasta')
+#     tb=[]
+#     l=[]
+#     for line in infile:
+#         if line[0]==">":
+#             l.append(line[1:-1])
+#         else:
+#             seq=line[:-1]
+#             tb.append(seq)
 
-    head=['ID','Sequence']
-    df=pd.DataFrame({"ID":l,"Sequence":tb})
-    df.to_csv("seq.csv")
+#     head=['ID','Sequence']
+#     df=pd.DataFrame({"ID":l,"Sequence":tb})
+#     df.to_csv("seq.csv")
 
 
-    df
+#     df
