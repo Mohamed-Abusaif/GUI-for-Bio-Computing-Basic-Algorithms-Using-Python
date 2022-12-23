@@ -39,15 +39,15 @@ def helperFunction(a,b,resultLabel , min_length=3):
 
 
  
-# def native_overlap(reads,k):
-#     olap={}
-#     for a,b in permutations(reads,2):
-#         olen=overlap(a, b,k)
-#         if olen>0:
-#             olap[(a,b)]=olen
-#     return olap
+def native_overlap(reads,k):
+    olap={}
+    for a,b in permutations(reads,2):
+        olen=overlap(a, b,k)
+        if olen>0:
+            olap[(a,b)]=olen
+    return olap
 
-# print(native_overlap(["ACGGTA", "GGTACC","GCATACG"],3))
+print(native_overlap(["ACGGTA", "GGTACC","GCATACG"],3))
 
 
 
