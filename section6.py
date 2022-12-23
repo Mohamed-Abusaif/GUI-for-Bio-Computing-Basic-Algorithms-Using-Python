@@ -1,6 +1,8 @@
-import tkinter
+import tkinter as tk
 import tkinter.messagebox
 import customtkinter
+from functools import partial
+
 
 # Modes: "System" (standard), "Dark", "Light"
 customtkinter.set_appearance_mode("Dark")
@@ -8,6 +10,7 @@ customtkinter.set_appearance_mode("Dark")
 customtkinter.set_default_color_theme("blue")
 
 import main
+from SectionsAlgorithms.AlgoSec6 import *
 
 
 class section6GUI(customtkinter.CTk):
@@ -34,13 +37,21 @@ class section6GUI(customtkinter.CTk):
         label.pack(pady=12, padx=10)
 
 
+        seqVar = tk.StringVar()
+        subseqVar = tk.StringVar()
+        resultLabel = customtkinter.CTkLabel(master=frame,font=("Roboto",16) ,text="Your Result WIll Be Printed Here!")
+
+        enterSeqLabel = customtkinter.CTkLabel(master=frame , text="Enter Sequence:" , font=("Roboto", 16)).pack()
+        SeqEntry = customtkinter.CTkEntry(master=frame, textvariable=seqVar,placeholder_text="Sequence").pack(padx=12 , pady=12)
+        subseqLabel = customtkinter.CTkLabel(master=frame , text="Enter sub sequence:" , font=("Roboto", 16)).pack()
+        subseqEntry = customtkinter.CTkEntry(master=frame, textvariable=subseqVar,placeholder_text="len").pack(padx=12 , pady=12)
+
+        helperFunctionPartial = partial(helperFunction , seqVar, subseqVar ,resultLabel)
+        overlapbtn = customtkinter.CTkButton(master=frame, text="Get Overlap!",command=helperFunctionPartial).pack(padx=12,pady=12)
+       
 
 
-
-
-
-
-
+        resultLabel.pack()
         back_btn = customtkinter.CTkButton(master=frame, text="Back to Home!", font=("Roboto" , 20) , command=back_to_home)
         back_btn.pack(pady=12, padx=10)
         # back_btn.grid(row=3 , column =0 , pady=12, padx=10)

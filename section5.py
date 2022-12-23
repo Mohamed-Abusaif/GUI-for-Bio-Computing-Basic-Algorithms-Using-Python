@@ -39,11 +39,9 @@ class section5GUI(customtkinter.CTk):
       
 
         seqVar = tk.StringVar()
-        lenVar = tk.StringVar()
         subseqVar = tk.StringVar()
-
-
         resultLabel = customtkinter.CTkLabel(master=frame,font=("Roboto",16) ,text="Your Result WIll Be Printed Here!")
+        lenVar = tk.StringVar()
 
 
         enterSeqLabel = customtkinter.CTkLabel(master=frame , text="Enter Sequence:" , font=("Roboto", 16)).pack()
