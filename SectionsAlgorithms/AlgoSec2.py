@@ -14,7 +14,7 @@ def GC_Content(seq, resultLabel):
 
 def Complement(seq, resultLabel=None):
     dic = {"G": "C", "C": "G", "A": "T", "T": "A"}
-    newseq= seq.get()
+    newseq = seq.get()
     s = list(newseq)
     for i in range(len(newseq)):
         s[i] = str(dic[newseq[i]])
@@ -25,42 +25,41 @@ def Complement(seq, resultLabel=None):
         resultLabel.configure(text="Result is: " + s)
         return s
 
-def Reverse(seq, resultLabel=None):
-        newseq = seq.get()
-        s = list(newseq)
-        s = reversed(s)
-        s = "".join(s)
-      
-        if resultLabel is None:
-            return s
-        else:
-            resultLabel.configure(text="Result is: " +s )
-            return s
 
+def Reverse(seq, resultLabel=None):
+    newseq = seq.get()
+    s = list(newseq)
+    s = reversed(s)
+    s = "".join(s)
+
+    if resultLabel is None:
+        return s
+    else:
+        resultLabel.configure(text="Result is: " + s)
+        return s
 
 
 def RComplement(seq):
-    dic={"G":"C","C":"G","A":"T","T":"A"}
-    s=list(seq)
+    dic = {"G": "C", "C": "G", "A": "T", "T": "A"}
+    s = list(seq)
     for i in range(len(seq)):
-        s[i]=str(dic[seq[i]])
-    s="".join(s)
-    return s    
-def RReverse(seq):
-    s=list(seq)
-    s=reversed(s)
-    s="".join(s)
+        s[i] = str(dic[seq[i]])
+    s = "".join(s)
     return s
 
-def Reverse_Complement( seq, resultLabel):
+
+def RReverse(seq):
+    s = list(seq)
+    s = reversed(s)
+    s = "".join(s)
+    return s
+
+
+def Reverse_Complement(seq, resultLabel):
     seq = (seq.get())
-    L=resultLabel
-    seq=RReverse(seq)
-    seq=RComplement(seq)
+    L = resultLabel
+    seq = RReverse(seq)
+    seq = RComplement(seq)
 
-    resultLabel.configure(text="Result is: " + seq )
-    return seq 
-
-
-
-
+    resultLabel.configure(text="Result is: " + seq)
+    return seq

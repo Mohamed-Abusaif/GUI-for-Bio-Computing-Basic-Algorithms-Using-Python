@@ -8,7 +8,6 @@ from functools import partial
 from SectionsAlgorithms.AlgoSec3 import *
 
 
-
 # Modes: "System" (standard), "Dark", "Light"
 customtkinter.set_appearance_mode("Dark")
 # Themes: "blue" (standard), "green", "dark-blue"
@@ -43,24 +42,22 @@ class section3GUI(customtkinter.CTk):
             master=frame, text="DNA Translation:", font=("Roboto", 24))
         Translationlabel.pack(pady=12, padx=10)
 
-        resultLabel = customtkinter.CTkLabel(master=frame,font=("Roboto",16) ,text="Your Result WIll Be Printed Here!")
+        resultLabel = customtkinter.CTkLabel(master=frame, font=(
+            "Roboto", 16), text="Your Result WIll Be Printed Here!")
         newSeq = tk.StringVar()
-        EnterSeqLabel = customtkinter.CTkLabel(master=frame, text="Enter Sequence:", font=("Roboto", 16)).pack()
-        sequenceEntry = customtkinter.CTkEntry(master=frame, textvariable=newSeq,placeholder_text="Sequence").pack()
-        
-        Translation_Table_partial = partial(Translation_Table, newSeq, resultLabel)
-        Translation_Table_btn = customtkinter.CTkButton(master=frame, text="Translate DNA Sequence!",command=Translation_Table_partial).pack(padx=12,pady=12)
+        EnterSeqLabel = customtkinter.CTkLabel(
+            master=frame, text="Enter Sequence:", font=("Roboto", 16)).pack()
+        sequenceEntry = customtkinter.CTkEntry(
+            master=frame, textvariable=newSeq, placeholder_text="Sequence").pack()
 
-
-
-
+        Translation_Table_partial = partial(
+            Translation_Table, newSeq, resultLabel)
+        Translation_Table_btn = customtkinter.CTkButton(
+            master=frame, text="Translate DNA Sequence!", command=Translation_Table_partial).pack(padx=12, pady=12)
 
         resultLabel.pack()
 
-        back_btn = customtkinter.CTkButton(master=frame, text="Back to Home!", font=("Roboto" , 20) , command=back_to_home)
+        back_btn = customtkinter.CTkButton(
+            master=frame, text="Back to Home!", font=("Roboto", 20), command=back_to_home)
         back_btn.pack(pady=12, padx=10)
         # back_btn.grid(row=3 , column =0 , pady=12, padx=10)
-
-
-
-

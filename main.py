@@ -1,3 +1,11 @@
+import section8
+import section7
+import section6
+import section5
+import section4
+import section3
+import section2
+import section1
 import tkinter
 import tkinter.messagebox
 import customtkinter
@@ -8,14 +16,6 @@ customtkinter.set_appearance_mode("Dark")
 customtkinter.set_default_color_theme("blue")
 
 
-import section1
-import section2
-import section3
-import section4
-import section5
-import section6
-import section7
-import section8
 class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
@@ -132,7 +132,6 @@ class App(customtkinter.CTk):
             app.mainloop()
         except:
             print("Scene Changed to Section 1!")
-         
 
     def section2_scene_event(self):
         try:
