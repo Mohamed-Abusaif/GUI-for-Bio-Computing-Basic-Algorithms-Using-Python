@@ -32,26 +32,4 @@ def query(t,p, lenVar , resultLabel):
             offsets.append(i)
 
     resultLabel.configure(text="query result: " + str(offsets))
-        
-
-
-
-
-
-# file=open("dna1.fasta")
-# l=[i for i in file]
-# t=l[1][0:-1]
-# p="AAG"
-# ln=3
-
-# index=IndexSorted(t,ln)
-# print(query(t,p,index))
-
-
-
-
-
-
-
-
-
+    
