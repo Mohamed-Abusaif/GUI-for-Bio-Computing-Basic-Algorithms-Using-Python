@@ -25,7 +25,6 @@ dec = {
 
 def indexingFunction(T,resultLabel):
     T = (T.get())
-
     table=[]
     i=2**0
     n=0
