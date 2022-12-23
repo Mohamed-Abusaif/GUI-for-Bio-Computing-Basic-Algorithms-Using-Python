@@ -34,7 +34,7 @@ class section5GUI(customtkinter.CTk):
         label.pack(pady=12, padx=10)
 
 
-
+        
 
 
 

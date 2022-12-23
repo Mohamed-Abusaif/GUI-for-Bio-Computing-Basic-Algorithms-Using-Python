@@ -47,8 +47,8 @@ class section3GUI(customtkinter.CTk):
         newSeq = tk.StringVar()
         EnterSeqLabel = customtkinter.CTkLabel(master=frame, text="Enter Sequence:", font=("Roboto", 16)).pack()
         sequenceEntry = customtkinter.CTkEntry(master=frame, textvariable=newSeq,placeholder_text="Sequence").pack()
+        
         Translation_Table_partial = partial(Translation_Table, newSeq, resultLabel)
-
         Translation_Table_btn = customtkinter.CTkButton(master=frame, text="Translate DNA Sequence!",command=Translation_Table_partial).pack(padx=12,pady=12)
 
 

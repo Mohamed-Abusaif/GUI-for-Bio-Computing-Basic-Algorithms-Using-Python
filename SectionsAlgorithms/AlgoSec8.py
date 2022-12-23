@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Dec 10 19:27:39 2022
-
-@author: Mohamed Elhakim
-"""
 import pandas as pd
 file=open("dna1.fasta")
 l=[i for i in file]

@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Oct 11 19:37:21 2022
-
-@author: Mohamed Elhakim
-"""
 import numpy as np
 from itertools import permutations
 

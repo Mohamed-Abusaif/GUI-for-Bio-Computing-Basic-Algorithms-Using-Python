@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Dec  4 10:08:26 2022
-
-@author: Mohamed Elhakim
-"""
 T = 'ACGACTACGATAAC$'
 l=[]
 for i in range(len(T)):

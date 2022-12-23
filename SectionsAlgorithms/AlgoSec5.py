@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Oct 11 19:37:21 2022
-
-@author: Mohamed Elhakim
-"""
 import numpy as np
 import bisect
 
@@ -32,28 +26,12 @@ def query(t,p,index):
 
 
 
-
-
-
-
-
-
-
-
 file=open("dna1.fasta")
 l=[i for i in file]
 t=l[1][0:-1]
 p="AAG"
 ln=3
-# table=[]
-# for i in range(len(t)-ln+1):
-#     table.append([t[i:i+ln],i])
-# for  i in range(len(table)):
-#     if p[0:ln]==table[i][0]:
-#         index=table[i][1]
-#         if t[index:index+len(p)]==p:
-#             print(i)
-# print(t[151:151+len(p)])
+
 index=IndexSorted(t,ln)
 print(query(t,p,index))
 

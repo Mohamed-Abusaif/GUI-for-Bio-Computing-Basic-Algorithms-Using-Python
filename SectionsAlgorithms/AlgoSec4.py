@@ -3,16 +3,16 @@ import time
 from tkinter import *
 
 def match(seq,sub_seq , resultLabel):
-    print("hello match function")
-
     seq = (seq.get())
     sub_seq = (sub_seq.get())
+
     x=-1
     for i in range(len(seq)-len(sub_seq)+1):
         if sub_seq==seq[i:i+len(sub_seq)]:
             x=i
     resultLabel.configure(text="Match: " + str(x))
-    return  
+    return x
+
 
 
 
@@ -20,7 +20,6 @@ def match(seq,sub_seq , resultLabel):
 
 
 def Badchars(seq,sub_seq,resultLabel):
-    print("hello bad chars function")
     seq = (seq.get())
     sub_seq = (sub_seq.get())
     table=np.zeros([4,len(sub_seq)])     
@@ -45,10 +44,19 @@ def Badchars(seq,sub_seq,resultLabel):
                 if seq[i+j] != sub_seq[j]:
                     k=row.index(seq[i+j])
                     i+=table[k,j]
-                    break 
+                    break
+                
+        '''
+        else:
+            for j in range(i+len(sub_seq)-1,i-1,-1):
+                if seq[j] != sub_seq[int(j-i)]:
+                    k=row.index(seq[j])
+                    i+=table[k,j-i]
+                    break
+        '''
         i=int(i+1)
-    resultLabel.configure(text="Bad Charachters: " + str(x))
-    return
+    resultLabel.configure(text="Bad Chars: " + str(x))
+    return x
 
 
 
