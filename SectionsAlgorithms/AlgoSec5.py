@@ -1,13 +1,24 @@
 import numpy as np
 import bisect
+from tkinter import *
+import customtkinter
 
+
+#sequence + ln -> تقسمهم لكام تبقي مش سترنج اصلا
 def IndexSorted(seq,ln):
     index = []
     for i in range(len(seq)-ln+1):
         index.append((seq[i:i+ln], i))
     index.sort() 
+    print(index)
     return index
-def query(t,p,index):
+
+#sequence + sub sequence + 
+def query(t,p, lenVar , resultLabel):
+    t = (t.get())
+    p = (p.get())
+    lenVar = int(lenVar.get())
+    index = IndexSorted(t,lenVar)
     keys = [r[0] for r in index]
     st = bisect.bisect_left(keys,p[:len(keys[0])])
     
@@ -19,21 +30,22 @@ def query(t,p,index):
     for i in l:
         if t[i:i+len(p)]==p:
             offsets.append(i)
-    return offsets
+
+    resultLabel.configure(text="query result: " + str(offsets))
         
 
 
 
 
 
-file=open("dna1.fasta")
-l=[i for i in file]
-t=l[1][0:-1]
-p="AAG"
-ln=3
+# file=open("dna1.fasta")
+# l=[i for i in file]
+# t=l[1][0:-1]
+# p="AAG"
+# ln=3
 
-index=IndexSorted(t,ln)
-print(query(t,p,index))
+# index=IndexSorted(t,ln)
+# print(query(t,p,index))
 
 
 

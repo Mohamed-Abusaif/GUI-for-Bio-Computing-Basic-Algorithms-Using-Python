@@ -1,6 +1,8 @@
 import numpy as np
 import time
 from tkinter import *
+import customtkinter
+
 
 def match(seq,sub_seq , resultLabel):
     seq = (seq.get())

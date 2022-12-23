@@ -1,4 +1,5 @@
 from tkinter import *
+import customtkinter
 
 def Translation_Table(seq , resultLabel):
     seq = (seq.get())
