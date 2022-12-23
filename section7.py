@@ -1,11 +1,16 @@
-import tkinter
+import tkinter as tk
 import tkinter.messagebox
 import customtkinter
+from functools import partial
+
 
 # Modes: "System" (standard), "Dark", "Light"
 customtkinter.set_appearance_mode("Dark")
 # Themes: "blue" (standard), "green", "dark-blue"
 customtkinter.set_default_color_theme("blue")
+
+
+from SectionsAlgorithms.AlgoSec7 import *
 
 import main
 
@@ -34,12 +39,20 @@ class section7GUI(customtkinter.CTk):
         label.pack(pady=12, padx=10)
 
 
+        seqVar = tk.StringVar()
+        resultLabel = customtkinter.CTkLabel(master=frame,font=("Roboto",16) ,text="Your Result WIll Be Printed Here!")
+
+        enterSeqLabel = customtkinter.CTkLabel(master=frame , text="Enter Sequence For Indexing:" , font=("Roboto", 16)).pack()
+        SeqEntry = customtkinter.CTkEntry(master=frame, textvariable=seqVar,placeholder_text="Sequence").pack(padx=12 , pady=12)
+       
+        indexingFunctionPartial = partial(indexingFunction , seqVar ,resultLabel)
+        indexingbtn = customtkinter.CTkButton(master=frame, text="Get Index!",command=indexingFunctionPartial).pack(padx=12,pady=12)
+       
 
 
 
 
-
-
+        resultLabel.pack()
 
         back_btn = customtkinter.CTkButton(master=frame, text="Back to Home!", font=("Roboto" , 20) , command=back_to_home)
         back_btn.pack(pady=12, padx=10)
