@@ -6,6 +6,7 @@ import section4
 import section3
 import section2
 import section1
+import suffix
 import tkinter
 import tkinter.messagebox
 import customtkinter
@@ -64,6 +65,10 @@ class App(customtkinter.CTk):
             self.sidebar_frame, text="Section 8", font=("Roboto", 20), command=self.section8_scene_event)
         self.sidebar_button_8.grid(row=8, column=0, padx=20, pady=10)
 
+        self.sidebar_button_9 = customtkinter.CTkButton(
+            self.sidebar_frame, text="Suffix Additional Feature!", font=("Roboto", 20), command=self.suffixFeature)
+        self.sidebar_button_9.grid(row=8, column=0, padx=20, pady=10)
+
         self.appearance_mode_label = customtkinter.CTkLabel(
             self.sidebar_frame, text="Appearance Mode:", anchor="w")
         self.appearance_mode_label.grid(row=9, column=0, padx=20, pady=(10, 0))
@@ -79,35 +84,15 @@ class App(customtkinter.CTk):
                                                                command=self.change_scaling_event)
         # self.scaling_optionemenu.grid(row=12, column=0, padx=20, pady=(10, 20))
 
-        # create tabview
-        self.tabview = customtkinter.CTkTabview(self, width=250)
-        self.tabview.grid(row=0, column=2, padx=(
-            20, 0), pady=(20, 0), sticky="nsew")
-        self.tabview.add("CTkTabview")
-        self.tabview.add("Tab 2")
-        self.tabview.add("Tab 3")
-        self.tabview.tab("CTkTabview").grid_columnconfigure(
-            0, weight=1)  # configure grid of individual tabs
-        self.tabview.tab("Tab 2").grid_columnconfigure(0, weight=1)
-
-        self.optionmenu_1 = customtkinter.CTkOptionMenu(self.tabview.tab("CTkTabview"), dynamic_resizing=False,
-                                                        values=["Value 1", "Value 2", "Value Long Long Long"])
-        self.optionmenu_1.grid(row=0, column=0, padx=20, pady=(20, 10))
-        self.combobox_1 = customtkinter.CTkComboBox(self.tabview.tab("CTkTabview"),
-                                                    values=["Value 1", "Value 2", "Value Long....."])
-        self.combobox_1.grid(row=1, column=0, padx=20, pady=(10, 10))
-        self.string_input_button = customtkinter.CTkButton(self.tabview.tab("CTkTabview"), text="Open CTkInputDialog",
-                                                           command=self.open_input_dialog_event)
-        self.string_input_button.grid(row=2, column=0, padx=20, pady=(10, 10))
-        self.label_tab_2 = customtkinter.CTkLabel(
-            self.tabview.tab("Tab 2"), text="CTkLabel on Tab 2")
-        self.label_tab_2.grid(row=0, column=0, padx=20, pady=20)
+        # self.homeLabel = customtkinter.CTkLabel(master=self , text="Welcome To Home Page" , font=("Roboto", 24)).pack()
+        # # create tabview
+        # self.tabview = customtkinter.CTkTabview(self, width=250)
+        # self.tabview.grid(row=0, column=2, padx=(
+        #     20, 0), pady=(20, 0), sticky="nsew")
 
         # set default values
         self.appearance_mode_optionemenu.set("Dark")
         self.scaling_optionemenu.set("100%")
-        self.optionmenu_1.set("CTkOptionmenu")
-        self.combobox_1.set("CTkComboBox")
 
     def open_input_dialog_event(self):
         dialog = customtkinter.CTkInputDialog(
@@ -195,6 +180,15 @@ class App(customtkinter.CTk):
             app.mainloop()
         except:
             print("Scene Changed to Section 8!")
+
+    def suffixFeature(self):
+        try:
+            print("suffix button event clicked")
+            self.destroy()
+            app = suffix.suffixGUI()
+            app.mainloop()
+        except:
+            print("Scene Changed to suffix scene!")
 
 
 if __name__ == "__main__":
