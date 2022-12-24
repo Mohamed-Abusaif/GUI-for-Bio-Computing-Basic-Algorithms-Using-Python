@@ -13,4 +13,5 @@ def suffix(T , resultLabel):
         (table.append([l2[i], i, dec[l2[i]]]))
 
     resultLabel.configure(text=str(table))
+    print(str(table))
     return

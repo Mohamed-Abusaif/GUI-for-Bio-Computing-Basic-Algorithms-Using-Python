@@ -32,7 +32,7 @@ class suffixGUI(customtkinter.CTk):
         frame = customtkinter.CTkFrame(master=self)
         frame.pack(pady=20, padx=60, fill="both", expand=True)
         label = customtkinter.CTkLabel(
-            master=frame, text="Section 8:", font=("Roboto", 24))
+            master=frame, text="Suffix:", font=("Roboto", 24))
         label.pack(pady=12, padx=10)
 
         seqVar1 = tk.StringVar()
