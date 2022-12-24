@@ -10,6 +10,8 @@ import suffix
 import tkinter
 import tkinter.messagebox
 import customtkinter
+import os
+from PIL import Image
 
 # Modes: "System" (standard), "Dark", "Light"
 customtkinter.set_appearance_mode("Dark")
@@ -65,9 +67,31 @@ class App(customtkinter.CTk):
             self.sidebar_frame, text="Section 8", font=("Roboto", 20), command=self.section8_scene_event)
         self.sidebar_button_8.grid(row=8, column=0, padx=20, pady=10)
 
-        self.sidebar_button_9 = customtkinter.CTkButton(
-            self.sidebar_frame, text="Suffix Additional Feature!", font=("Roboto", 20), command=self.suffixFeature)
-        self.sidebar_button_9.grid(row=8, column=0, padx=20, pady=10)
+
+        #Home Section
+
+       
+
+        self.WelcomeLabel =  customtkinter.CTkLabel(
+            self, text="Welcome To Bio Computing Project!" ,font=("Roboto", 26),)
+        self.WelcomeLabel.grid(row=0, column=1)
+
+        image_path = os.path.join(os.path.dirname(os.path.realpath(__file__)))
+        self.large_test_image = customtkinter.CTkImage(Image.open(os.path.join( image_path ,"img.jpeg")), size=(500, 300))
+        self.home_frame_large_image_label = customtkinter.CTkLabel(self, text="", image=self.large_test_image)
+        self.home_frame_large_image_label.grid(row=1, column=1)
+
+        self.label0 =  customtkinter.CTkLabel(
+            self, text="Please Choose The Section From the Side Bar!\n\n  Or You Can Choose The Suffix Additional feature Here: " ,font=("Roboto", 20),)
+        self.label0.grid(row=2, column=1)
+
+        self.suffixBtn = customtkinter.CTkButton(
+            self, text="Go To Suffix Additional Feature!", font=("Roboto", 20), command=self.suffixFeature)
+        self.suffixBtn.grid(row=3, column=1 ,padx=20, pady=(10, 10) )
+
+
+   
+
 
         self.appearance_mode_label = customtkinter.CTkLabel(
             self.sidebar_frame, text="Appearance Mode:", anchor="w")
@@ -82,13 +106,7 @@ class App(customtkinter.CTk):
         # self.scaling_label.grid(row=11, column=0, padx=20, pady=(10, 0))
         self.scaling_optionemenu = customtkinter.CTkOptionMenu(self.sidebar_frame, values=["80%", "90%", "100%", "110%", "120%"],
                                                                command=self.change_scaling_event)
-        # self.scaling_optionemenu.grid(row=12, column=0, padx=20, pady=(10, 20))
 
-        # self.homeLabel = customtkinter.CTkLabel(master=self , text="Welcome To Home Page" , font=("Roboto", 24)).pack()
-        # # create tabview
-        # self.tabview = customtkinter.CTkTabview(self, width=250)
-        # self.tabview.grid(row=0, column=2, padx=(
-        #     20, 0), pady=(20, 0), sticky="nsew")
 
         # set default values
         self.appearance_mode_optionemenu.set("Dark")
